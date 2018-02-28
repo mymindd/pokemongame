@@ -5,8 +5,9 @@ class WildPokemon{
     private String[] types;
     private float weight;
     private float stepLenght;
-
-    public WildPokemon(String[] type, float weight, float stepLenght){
+    private String name;
+    public WildPokemon(String name, String[] type, float weight, float stepLenght){
+        this.name = name;
         this.type = new String[] {"normal"};
         this.weight = weight;
         this.stepLenght = stepLenght;
