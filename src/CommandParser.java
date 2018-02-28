@@ -3,6 +3,7 @@ import java.io.*;
 
 class CommandParser{
 	private PokemonFarm pokemonFarm;
+    private WildPokemon wildPokemon;
 	private Scanner commandScanner;
 	private boolean isRunning;
 
@@ -36,7 +37,9 @@ class CommandParser{
 				this.walkPokemons();	
 			else if(command.equals("remove"))
 				this.delPokemons();
-		}
+	        else if(command.equals("go wild"))
+                this.goWild();
+        }
 
 	}
 
@@ -135,6 +138,39 @@ class CommandParser{
 		}
 	}
 
+    private void goWild(){
+        boolean inWild = true;
 
-}
+        System.out.print("Welcome to Wild");
+        do{
+            System.out.print("What do you want ?");
+            String comWild = this.commandScanner.next();
+        
 
+
+            if(comWild.equals("find")){
+                String pokemon =  this.pokemonWild.find();
+                System.out.print(""+pokemon);
+
+                System.out.print("Do you want to catch ?(Y/N)");
+                String yN = this.commandScanner.next();
+                if(yN.equals("Y")){
+                    System.out.println("Select Ball");
+                    System.out.println("1.pokeball");
+                    System.out.println("2.greatball");
+                    System.out.println("3.ultraball");
+                    String ball = this.commandScanner.next();
+                    this.wildPokemon.catchIt(ball);   
+                }
+                else {
+                    System.out.println("Ok !");
+                 }
+        
+                }
+            else if(comWild.equals("back")){
+                inWild = false;
+            }
+        }
+        while(inWild);
+    }
+    }
