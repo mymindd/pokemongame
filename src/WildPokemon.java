@@ -13,15 +13,15 @@ class WildPokemon{
         this.stepLenght = stepLenght;
     }
 
-    public boolean cath (String pokeball){
+    public boolean catchIt (String pokeball){
         if(pokeball.equals("pokeball")){
-            this.pokeBall.cath();
+            this.pokeBall.catchIt();
         }
         else if(pokeball.equals("greatball")){
-            this.greatBall.cath();
+            this.greatBall.catchIt();
         }
         else if(pokeball.equals("ultraball")){
-            this.ultraBall.cath();
+            this.ultraBall.catchIt();
         }
 
     }
