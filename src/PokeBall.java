@@ -5,7 +5,7 @@ import java.util.*;
 class PokeBall{
 	private float chance;
     
-    public PokeBall(float chance){
+    public PokeBall(){
         this.chance = .9f;
     }
 

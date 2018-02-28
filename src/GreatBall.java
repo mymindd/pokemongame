@@ -5,7 +5,7 @@ import java.util.*;
 class GreatBall{
 	private float chance;
     
-    public GreatBall(float chance){
+    public GreatBall(){
         this.chance = .9f;
     }
 

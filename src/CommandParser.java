@@ -37,7 +37,7 @@ class CommandParser{
 				this.walkPokemons();	
 			else if(command.equals("remove"))
 				this.delPokemons();
-	        else if(command.equals("go wild"))
+	        else if(command.equals("wild"))
                 this.goWild();
         }
 
@@ -141,9 +141,9 @@ class CommandParser{
     private void goWild(){
         boolean inWild = true;
 
-        System.out.print("Welcome to Wild");
+        System.out.println("Welcome to Wild");
         do{
-            System.out.print("What do you want ?");
+            System.out.print("What do you want ? : ");
             String comWild = this.commandScanner.next();
         
 
@@ -160,7 +160,7 @@ class CommandParser{
                     System.out.println("2.greatball");
                     System.out.println("3.ultraball");
                     String ball = this.commandScanner.next();
-                    this.wildPokemon.catchIt(ball);   
+                    this.wildPokemon.catchIt(ball);                
                 }
                 else {
                     System.out.println("Ok !");

@@ -21,12 +21,17 @@ class WildPokemon{
 
     public void catchIt (String pokeball){
         if(pokeball.equals("pokeball")){
+        PokeBall pokeBall = new PokeBall();
            this.pokeBall.catchIt();
         }
         else if(pokeball.equals("greatball")){
+
+        GreatBall greatBall = new GreatBall();
            this.greatBall.catchIt();
         }
         else if(pokeball.equals("ultraball")){
+
+        UltraBall ultraBall = new UltraBall();
            this.ultraBall.catchIt();
         }
 

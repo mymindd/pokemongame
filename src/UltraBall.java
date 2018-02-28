@@ -5,7 +5,7 @@ import java.util.*;
 class UltraBall{
 	private float chance;
     
-    public UltraBall(float chance){
+    public UltraBall(){
         this.chance = .9f;
     }
 
