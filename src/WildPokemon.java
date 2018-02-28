@@ -33,17 +33,22 @@ class WildPokemon{
     }
     public void find(){
     int poke =(int)Math.random() * 3 + 1;
-    if (poke == 1)
+    if (poke == 1){
         pichu = new Pichu(
                 "PichuWild",(float)(Math.random() * 20 + 5),(float)(Math.random() * 2 + 1)
                 );
-    else if(poke == 2)
+        System.out.println("You found Pichu");}
+    else if(poke == 2){
         snorlax = new Snorlax (
                 "SnorlaxWild",(float)(Math.random() * 20 + 5),(float)(Math.random() * 2 + 1)
                 );
-    else if(poke == 3 )
+    
+        System.out.println("You found Snorlax");}
+    else if(poke == 3 ){
         eevee = new Eevee(
                 "EeveeWild",(float)(Math.random() * 20 + 5),(float)(Math.random() * 2 + 1)
                 );
+   
+        System.out.println("You found Eevee");}
     }
 }

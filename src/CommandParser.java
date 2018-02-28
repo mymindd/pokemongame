@@ -149,8 +149,8 @@ class CommandParser{
 
 
             if(comWild.equals("find")){
-                String pokemon =  this.wildPokemon.find();
-                System.out.print(""+pokemon);
+                this.wildPokemon.find();
+
 
                 System.out.print("Do you want to catch ?(Y/N)");
                 String yN = this.commandScanner.next();
