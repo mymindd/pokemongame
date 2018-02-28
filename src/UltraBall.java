@@ -6,13 +6,13 @@ class UltraBall{
 	private float chance;
     
     public UltraBall(float chance){
-        this.chance = 1.0f;
+        this.chance = .9f;
     }
 
-    public boolean cath(){
+    public boolean catchIt(){
         Random rand = new Random();
-        int ch = rand.nextInt(100);
-        ch = ch * chance;
+        double ch = Math.random() * 100 + 1;
+        ch = ch*chance;
         if (ch >= 50){
             return true;
         }
