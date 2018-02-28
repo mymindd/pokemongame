@@ -12,7 +12,7 @@ class WildPokemon{
     private float weight;
     private float stepLenght;
     private String name;
-    public WildPokemon(String name, String type, float weight, float stepLenght){
+    public WildPokemon(){
         this.name = name;
         this.type = type;
         this.weight = weight;

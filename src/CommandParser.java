@@ -149,6 +149,7 @@ class CommandParser{
 
 
             if(comWild.equals("find")){
+                WildPokemon wildPokemon = new WildPokemon();
                 this.wildPokemon.find();
 
 
