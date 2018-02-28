@@ -2,11 +2,11 @@ import java.io.*;
 import java.util.*;
 
 
-class PokeBall{
+class UltraBall{
 	private float chance;
     
-    public PokeBall(float chance){
-        this.chance = .8f;
+    public UltraBall(float chance){
+        this.chance = 1.0f;
     }
 
     public boolean cath(){
