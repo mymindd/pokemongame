@@ -2,6 +2,9 @@ import java.io.*;
 import java.util.*;
 
 class WildPokemon{
+    private Pichu pichu;
+    private Snorlax snorlax;
+    private Eevee eevee;
     private PokeBall pokeBall;
     private GreatBall greatBall;
     private UltraBall ultraBall;
@@ -27,5 +30,20 @@ class WildPokemon{
            this.ultraBall.catchIt();
         }
 
+    }
+    public void find(){
+    int poke =(int)Math.random() * 3 + 1;
+    if (poke == 1)
+        pichu = new Pichu(
+                "PichuWild",(float)(Math.random() * 20 + 5),(float)(Math.random() * 2 + 1)
+                );
+    else if(poke == 2)
+        snorlax = new Snorlax (
+                "SnorlaxWild",(float)(Math.random() * 20 + 5),(float)(Math.random() * 2 + 1)
+                );
+    else if(poke == 3 )
+        eevee = new Eevee(
+                "EeveeWild",(float)(Math.random() * 20 + 5),(float)(Math.random() * 2 + 1)
+                );
     }
 }
