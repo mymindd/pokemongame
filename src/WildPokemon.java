@@ -3,7 +3,7 @@ import java.util.*;
 
 class WildPokemon{
     private String[] types;
-    private weight;
+    private float weight;
     private float stepLenght;
 
     public WildPokemon(String[] type, float weight, float stepLenght){
