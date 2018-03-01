@@ -142,20 +142,20 @@ class CommandParser{
 		Bag bag = new Bag();
 		forest.foundPokemon();
 		
-		System.out.print("Catch or RunAway: ");
-		String cmd = commandScanner.nextLine();
+		System.out.print("Catch or Back: ");
+		String comWild = commandScanner.nextLine();
 
-		if(cmd.equalsIgnoreCase("catch")){
+		if(comWild.equalsIgnoreCase("catch")){
 			System.out.print("Choose your ball: ");
 			String ball = commandScanner.nextLine();
 			bag.useBall(ball, forest.getWildPokemon());
 			bag.listItem();
 		}
 
-		else if(cmd.equalsIgnoreCase("back")){
-			System.out.println("Escape from forest...");
+		else if(comWild.equalsIgnoreCase("back")){
+			System.out.println("Back to farm ...");
 		}
 		
 		
-}
     }
+}
