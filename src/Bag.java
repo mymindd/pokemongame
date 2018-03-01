@@ -6,6 +6,7 @@ class Bag{
 	private Scanner sc;
 	private boolean success;
 
+    private WildPokemon wildPokemon;
 	public Bag(){
 		pokemonBag = new ArrayList<Pokemon>();
 		sc = new Scanner(System.in);
@@ -25,17 +26,17 @@ class Bag{
 
 	public void useBall(String ball, Pokemon wildPokemon){
 		if(ball.equalsIgnoreCase("pokeball")){
-			Pokeball pokeball = new Pokeball();
+			PokeBall pokeball = new PokeBall();
 			success = pokeball.catchPokemon(wildPokemon.getMood());
 		}
 		
 		else if(ball.equalsIgnoreCase("greatball")){
-			Greatball greatball = new Greatball();
+			GreatBall greatball = new GreatBall();
 			success = greatball.catchPokemon(wildPokemon.getMood());
 		}
 
 		else if(ball.equalsIgnoreCase("ultraball")){
-			Ultraball ultraball = new Ultraball();
+			UltraBall ultraball = new UltraBall();
 			success = ultraball.catchPokemon(wildPokemon.getMood());
 		}
 

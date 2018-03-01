@@ -12,7 +12,9 @@ class WildPokemon{
     private float weight;
     private float stepLenght;
     private String name;
+    private float mood;
     public WildPokemon(){
+        this.mood = mood;
         this.name = name;
         this.type = type;
         this.weight = weight;
@@ -56,4 +58,12 @@ class WildPokemon{
    
         System.out.println("You found Eevee");}
     }
+    public void setName(String name){
+		this.name = name;
+	}
+
+	public float getMood(){
+		return this.mood;
+	}
+
 }

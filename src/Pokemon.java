@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 class Pokemon{
@@ -8,6 +7,7 @@ class Pokemon{
 	private int step;
 	private float gainingWeightStep;
 	private String[] types;
+	private float mood;
 
 	public Pokemon(String name,
 		       float weight,
@@ -16,6 +16,7 @@ class Pokemon{
 		       String[] types){
 		this.name = name;
 		this.weight = weight;
+		this.mood = mood;
 		this.stepLength = stepLength;
 		this.gainingWeightStep = gainingWeightStep;
 		step = 0;
@@ -24,11 +25,15 @@ class Pokemon{
 			this.types = new String[] {"normal"};
 		else
 			this.types = types;
+
+		Random rand = new Random();
+		mood = rand.nextInt(5);
+
 	}
 
 	public void walk(){
 		step += 1;
-		weight -= 1;
+		weight -= gainingWeightStep;
 	}
 
 	public void eat(){
@@ -47,7 +52,17 @@ class Pokemon{
 		System.out.println("  Today Step: " + step);
 		System.out.println("------------------------------------------");
 	}
+
 	public String getName(){
 		return this.name;
 	}
+
+	public void setName(String name){
+		this.name = name;
+	}
+
+	public float getMood(){	
+		return this.mood;
+	}
+
 }
