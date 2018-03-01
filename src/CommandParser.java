@@ -3,7 +3,7 @@ import java.io.*;
 
 class CommandParser{
 	private PokemonFarm pokemonFarm;
-    private WildPokemon wildPokemon;
+    private Pokemon wildPokemon;
 	private Scanner commandScanner;
 	private boolean isRunning;
 
@@ -137,7 +137,7 @@ class CommandParser{
 			this.pokemonFarm.remove(name);
 		}
 	}
-    private void gotoForest(){
+    private void goWild(){
 		Forest forest = new Forest();
 		Bag bag = new Bag();
 		forest.foundPokemon();

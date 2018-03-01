@@ -14,8 +14,8 @@ class Forest{
 		randPokemon = rand.nextInt(3);
 
 		if(randPokemon == 0){
-			System.out.println("You found wild Zubat!!!");
-			wildPokemon = new Zubat("wild zubat", rand.nextInt(10) + 1, 1f);
+			System.out.println("You found wild Pichu!!!");
+			wildPokemon = new Pichu("wild pichu", rand.nextInt(10) + 1, 1f);
 		}
 
 		else if(randPokemon == 1){
@@ -24,8 +24,8 @@ class Forest{
 		}
 
 		else if(randPokemon == 2){
-			System.out.println("You found wild Pikachu!!!");
-			wildPokemon = new Pikachu("wild pikachu", rand.nextInt(10) + 1, 1f);
+			System.out.println("You found wild Eevee!!!");
+			wildPokemon = new Eevee("wild eevee", rand.nextInt(10) + 1, 1f);
 		}
 	}
 

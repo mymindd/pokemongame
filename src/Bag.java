@@ -6,7 +6,6 @@ class Bag{
 	private Scanner sc;
 	private boolean success;
 
-    private WildPokemon wildPokemon;
 	public Bag(){
 		pokemonBag = new ArrayList<Pokemon>();
 		sc = new Scanner(System.in);
