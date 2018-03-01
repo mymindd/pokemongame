@@ -137,41 +137,25 @@ class CommandParser{
 			this.pokemonFarm.remove(name);
 		}
 	}
+    private void gotoForest(){
+		Forest forest = new Forest();
+		Bag bag = new Bag();
+		forest.foundPokemon();
+		
+		System.out.print("Catch or RunAway: ");
+		String cmd = commandScanner.nextLine();
 
-    private void goWild(){
-        boolean inWild = true;
+		if(cmd.equalsIgnoreCase("catch")){
+			System.out.print("Choose your ball: ");
+			String ball = commandScanner.nextLine();
+			bag.useBall(ball, forest.getWildPokemon());
+			bag.listItem();
+		}
 
-        System.out.println("Welcome to Wild");
-        do{
-            System.out.print("What do you want ? : ");
-            String comWild = this.commandScanner.next();
-        
-
-
-            if(comWild.equals("find")){
-                WildPokemon wildPokemon = new WildPokemon();
-                this.wildPokemon.find();
-
-
-                System.out.print("Do you want to catch ?(Y/N)");
-                String yN = this.commandScanner.next();
-                if(yN.equals("Y")){
-                    System.out.println("Select Ball");
-                    System.out.println("1.pokeball");
-                    System.out.println("2.greatball");
-                    System.out.println("3.ultraball");
-                    String ball = this.commandScanner.next();
-                    this.wildPokemon.catchIt(ball);                
-                }
-                else {
-                    System.out.println("Ok !");
-                 }
-        
-                }
-            else if(comWild.equals("back")){
-                inWild = false;
-            }
-        }
-        while(inWild);
-    }
+		else if(cmd.equalsIgnoreCase("back")){
+			System.out.println("Escape from forest...");
+		}
+		
+		
+}
     }
