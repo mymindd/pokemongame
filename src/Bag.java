@@ -1,4 +1,6 @@
 import java.util.*;
+
+
 class Bag{
 	private ArrayList<Pokemon> pokemonBag;
 	private Scanner sc;
@@ -15,7 +17,7 @@ class Bag{
 
 	public void listItem(){
 		System.out.println("Item in bag");                         
-		System.out.println("-------------------------------------");
+		System.out.println("=================================");
 		for(Pokemon pokemon: pokemonBag){
 			pokemon.print();
 		}
