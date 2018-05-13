@@ -1,7 +1,7 @@
 
 class Snorlax extends Pokemon {
-    public Snorlax(String name, float weight, float stepLength){
-		super(name, weight, stepLength, 1f, new String[] {"normal"});
+    public Snorlax(String name, double weight, double damage){
+		super(name, weight, damage, 1, new String[] {"normal"});
 	}
 
 	// skill
